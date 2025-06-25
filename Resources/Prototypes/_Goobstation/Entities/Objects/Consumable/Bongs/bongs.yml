@@ -1,0 +1,9 @@
+- type: entity
+  id: BongEmpty
+  parent: BaseVape
+  name: bong
+  description: I wonder what this is used for?
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Consumable/Smokeables/Bongs/bong.rsi
+    state: unlit-icon
