@@ -14,6 +14,8 @@
 
 using Content.Shared.Chemistry.Components;
 using Content.Shared.DoAfter;
+using Content.Shared.Nutrition.Components;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Nutrition;
@@ -81,3 +83,33 @@ public record struct SliceFoodEvent();
 public sealed partial class SliceFoodDoAfterEvent : SimpleDoAfterEvent
 {
 }
+/*
+/// <summary>
+///     Do after event for bongs.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed partial class BongDoAfterEvent : DoAfterEvent
+{
+    [DataField("solution", required: true)]
+    public Solution Solution = default!;
+
+    [DataField("forced", required: true)]
+    public bool Forced = default!;
+
+    [DataField("SmokeableItem", required: true)]
+    public SmokableComponent SmokeableItem = default!;
+
+    private BongDoAfterEvent()
+    {
+    }
+
+    public BongDoAfterEvent(Solution solution, bool forced, SmokableComponent smokeableItem)
+    {
+        Solution = solution;
+        Forced = forced;
+        SmokeableItem = smokeableItem;
+    }
+
+    public override DoAfterEvent Clone() => this;
+}
+*/

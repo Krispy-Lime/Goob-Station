@@ -140,6 +140,7 @@ namespace Content.Server.Nutrition.EntitySystems
             InitializeCigars();
             InitializePipes();
             InitializeVapes();
+            InitializeBongs();
         }
 
         private void OnExtinguishEvent(Entity<SmokableComponent> ent, ref ExtinguishEvent args)

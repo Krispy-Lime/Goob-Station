@@ -1,6 +1,34 @@
 - type: entity
+  parent: BaseSmokable
+  id: BaseBong
+  abstract: true
+  components:
+  - type: Bong
+    bowl_slot:
+      name: bong-slot-component-slot-name-bowl
+      whitelist:
+        tags:
+          - Smokable
+      insertSound:
+        path: /Audio/Weapons/Guns/Empty/empty.ogg
+      ejectSound:
+        path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: ContainerContainer
+    containers:
+      bowl_slot: !type:ContainerSlot
+  - type: ItemSlots
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 30
+  - type: RefillableSolution
+    solution: smokable
+  - type: ExaminableSolution
+    solution: smokable
+
+- type: entity
   id: BongEmpty
-  parent: BaseVape
+  parent: BaseBong
   name: bong
   description: I wonder what this is used for?
   components:
